@@ -20,7 +20,7 @@ function promisify(obj, method) {
 
 class Datastore {
   constructor(options = {}) {
-    this.store = datastore({ projectId: options.projectId });
+    this.store = datastore({ projectId: options.projectId, keyFilename: options.keyFilename });
 
     this.id = options.id || 'id';
     this.kind = options.kind;
